@@ -7,9 +7,14 @@
 
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
+          <div class="singleTitle">
+            <h1 class="entry-title"><?php the_title(); ?></h1>
+            <button class="viewLive"><a href="<?php the_field('website') ?>">View Live</a></button>
+          </div>
         <div class="singleContent">
           <div class="fullDescription">
+                
+                <div class="tags">
                 <!-- foreach to separate tags -->
                 <?php 
                   $field = get_field_object('tags');
@@ -25,6 +30,7 @@
                     <?php endforeach; ?>
                   </ul>
                 <?php endif; ?>
+                </div>
 
             <div class="entry-content">
               <?php the_content(); ?>

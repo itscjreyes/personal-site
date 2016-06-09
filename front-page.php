@@ -62,7 +62,23 @@ get_header();  ?>
 								<div class="wrapper">
 									<h3><?php the_title() ?></h3>
 									<p><?php the_field('short_desc') ?></p>
-									<button class="viewMore"><a href="<?php the_permalink(); ?>">View More</button>
+									<div class="tags">
+										<?php 
+										  $field = get_field_object('tags');
+										  $value = $field['value'];
+										  $choices = $field['choices'];
+
+										  if( $value ): ?>
+										  <ul>
+										    <?php foreach( $value as $v ): ?>
+										    <li>
+										      <?php echo $choices[ $v ]; ?>
+										    </li>
+										    <?php endforeach; ?>
+										  </ul>
+										<?php endif; ?>
+									</div>
+									<button class="viewMore"><a href="<?php the_permalink(); ?>">View More</a></button>
 									<button class="viewLive"><a href="<?php the_field('website') ?>">View Live</a></button>
 								</div>
 							</figcaption>
