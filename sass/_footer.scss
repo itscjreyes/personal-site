@@ -1,3 +1,32 @@
 footer {
 	clear: both;
+	text-align: center;
+	background-color: $colourAccent;
+	color: white;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 3% 0;
+	}
+
+	a {
+		color: white;
+
+		&:hover {
+			border: none;
+			color: white;
+		}
+	}
+
+	ul {
+		
+		li {
+			display: inline-block;
+			font-size: 20px;
+			padding: 0 10px;
+			background-color: $colourAccent;
+		}
+	}
 }

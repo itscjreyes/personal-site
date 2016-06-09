@@ -9,6 +9,8 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+h1, h2, h3, h4, h5, h6, p, ul, li {padding: 0; margin: 0}
+
 .clearfix:after {
    content: " ";
    visibility: hidden;

@@ -1,0 +1,72 @@
+header {
+	position: fixed;
+	background-color: white;
+	width: 100%;
+	top: 0;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	z-index: 999;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0;
+	}
+}
+
+
+header h1 {
+	font-size: 20px;
+	text-transform: none;
+	background-color: $colourAccent;
+	border-radius: 50%;
+	color: white;
+	padding: 10px;
+	font-family: $fontBody;
+	letter-spacing: 0;
+}
+
+header ul {
+	margin: 0;
+	padding: 0;
+
+	li {
+		display: inline;
+		margin-right: 10px;
+		text-transform: capitalize;
+		letter-spacing: 2px;
+		padding-left: 30px;
+		position: relative;
+	}
+
+	a {
+		font-size: 14px;
+		letter-spacing: 2px;
+		color: $colourBody;
+		text-transform: uppercase;
+		transition: all 0.4s ease;
+
+		&:after {
+			content: "";
+			width: 0px;
+			height: 1px;
+			background-color: $colourAccent;
+			position: absolute;
+			bottom: 0;
+			left: 30px;
+			transition: all 0.4s ease;
+		}
+
+		&:hover {
+			color: $colourAccent;
+			border-bottom: none;
+			
+			&:after {
+				width: 30px;
+			}
+		}
+	}
+}
+

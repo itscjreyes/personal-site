@@ -1,9 +1,15 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+    <p>&copy; CJ Reyes <?php echo date('Y'); ?></p>
+    <ul>
+    	<li><a href="https://github.com/itscjreyes"><i class="fa fa-github"></i></a></li>
+    	<li><a href="https://ca.linkedin.com/in/reyescj"><i class="fa fa-linkedin"></i></a></li>
+    	<li><a href="https://twitter.com/itscjreyes"><i class="fa fa-twitter"></i></a></li>
+    </ul>
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
 <script>
 // scripts.js, plugins.js and jquery are enqueued in functions.php
 /* Google Analytics! */
@@ -15,4 +21,3 @@
 
 <?php wp_footer(); ?>
 </body>
-</html>

@@ -51,6 +51,10 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style('devicons', 'https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css');
+
+	wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Work+Sans:400,700|Lora:400,700');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -69,6 +73,14 @@ function hackeryou_scripts() {
   	null, //version number
   	true //load in footer
   );
+
+  wp_enqueue_script(
+  	'smoothscroll',
+  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js",
+  	false,
+  	null,
+  	true
+  	);
 
   wp_enqueue_script(
     'plugins', //handle
@@ -281,3 +293,6 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+/* Hide admin bar */
+add_filter('show_admin_bar', '__return_false');
