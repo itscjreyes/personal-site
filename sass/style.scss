@@ -109,7 +109,7 @@ h4 {
 	padding: 2%;
 
 	img {
-		background-color:$colourAccent;
+		background-color: white;
 		border-radius: 50%;
 	}
 }
@@ -125,6 +125,8 @@ h4 {
 	font-size: 40px;
 	margin: 20px;
 	display: inline-block;
+	transition: all 0.3s ease;
+	position: relative;
 }
 
 /// Portfolio Styles ///
@@ -293,6 +295,12 @@ figcaption {
 
 .contactForm {
 	width: 50%;
+	position: relative;
+
+	.form-label {
+		visibility: hidden;
+		position: absolute;
+	}
 	
 	input,
 	textarea {
@@ -306,40 +314,26 @@ figcaption {
 	}
 
 	textarea {
-		min-height: 150px;
+		min-height: 100px;
 	}
 }
-	input[name="Submit"] {
-		width: 25%;
-		margin: 10px auto;
-		color: $colourAccent;
-		background: none;
-		border: none;
-		font-size: 18px;
-		letter-spacing: 2px;
+	input[type="submit"] {
+		width: 20%;
+		margin: 20px auto;
+		padding: 5px 10px;
+		color: white;
+		background: $colourAccent;
+		border: 1px solid $colourAccent;
 		text-transform: uppercase;
-		position: relative;
-
-		&:after {
-			content: "";
-			width: 0px;
-			height: 1px;
-			background-color: $colourAccent;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			transition: all 0.4s ease;
-		}
+		font-size: 14px;
+		letter-spacing: 2px;
+		transition: all 0.4s ease;
 
 		&:hover {
+			background: none;
 			color: $colourAccent;
-			border-bottom: none;
-			
-			&:after {
-				width: 30px;
-			}
 		}
-	}
+}
 
 ////// SINGLE PAGE STYLES //////
 
@@ -471,14 +465,58 @@ figcaption {
 	}
 }
 
+////// 404 PAGE STYLES //////
+
+.notFound {
+	height: 73vh;
+	.container {
+		margin-top: 10vh;
+	}
+
+	h1 {
+		margin-bottom: 3%;
+	}
+
+	button {
+		background-color: $colourAccent;
+		border: 1px solid $colourAccent;
+		margin-right: 5px;
+		margin-top: 20px;
+		transition: all 0.4s ease;
+		color: white;
+		padding: 5px 10px;
+
+		&:hover {
+			background-color: white;
+			color: $colourAccent;
+		}
+	}
+}
+
 /* MEDIA QUERIES */
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
+	
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 650px) {
+
+	.fullNav {
+		display: none;
+	}
+
+	.hamburger {
+		display: block;
+		z-index: 300;
+	}
+
+	.show {
+		visibility: visible;
+		opacity: 1;
+		right: 0;
+	}
 }
 
 /* Landscape phones and down */

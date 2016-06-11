@@ -17,7 +17,7 @@
   <div class="container">
     <h1></h1>
     
-    <nav>
+    <nav class="fullNav">
       <ul>
         <li><a href="<?php echo home_url(); ?>">home</a></li>
         <li><a href="<?php echo home_url(); ?>/#about">about</a></li>
@@ -26,6 +26,20 @@
       </ul>
     </nav>
 
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div> <!-- /.container -->
+
+    <nav class="responsiveNav">
+      <ul>
+        <li><a href="<?php echo home_url(); ?>">home</a></li>
+        <li><a href="<?php echo home_url(); ?>/#about">about</a></li>
+        <li><a href="<?php echo home_url(); ?>/#portfolio">portfolio</a></li>
+        <li><a href="<?php echo home_url(); ?>/#contact">contact</a></li>
+      </ul>
+    </nav>
 </header><!--/.header-->
 

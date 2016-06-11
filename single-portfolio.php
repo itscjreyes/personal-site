@@ -46,8 +46,9 @@
           </div><!-- .fullDescription -->
           
           <div class="fullImages">
-            <?php $portImage = get_field('images_group')[1]['port_img']; ?>
-            <img src="<?php echo $portImage['url'] ?>" alt="">
+            <?php $portImage = get_field('images_group') ?>
+            <?php $portImageArray = $portImage[1]['port_img'] ?>
+            <img src="<?php echo $portImageArray['url'] ?>" alt="">
           </div><!-- .fullImages -->
         </div><!-- .singleContent -->
 

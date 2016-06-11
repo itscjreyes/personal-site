@@ -5,6 +5,7 @@
     	<li><a href="https://github.com/itscjreyes"><i class="fa fa-github"></i></a></li>
     	<li><a href="https://ca.linkedin.com/in/reyescj"><i class="fa fa-linkedin"></i></a></li>
     	<li><a href="https://twitter.com/itscjreyes"><i class="fa fa-twitter"></i></a></li>
+    	<li><a href="https://medium.com/@cjreyes"><i class="fa fa-medium"></i></a></li>
     </ul>
   </div>
 </footer>

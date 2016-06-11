@@ -15,7 +15,7 @@ get_header();  ?>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<div class="aboutText">
 				<h4>about me.</h4>
-				<p><?php the_content(); ?></p>
+				<p><?php the_field('bio') ?></p>
 				<div class="skills">
 					<span class="devicons devicons-html5"></span>
 					<span class="devicons devicons-css3"></span>
@@ -55,9 +55,11 @@ get_header();  ?>
 					while( $portQuery->have_posts() ) {
 						$portQuery->the_post();
 						?>
-						<?php $portImage = get_field('images_group')[0]['port_img']; ?>
+						<?php $portImage = get_field('images_group') ?>
+						<?php $portImageArray = $portImage[0]['port_img'] ?>
+
 						<figure>
-							<img src="<?php echo $portImage['url'] ?>" alt="">
+							<img src="<?php echo $portImageArray['url'] ?>" alt="">
 							<figcaption>
 								<div class="wrapper">
 									<h3><?php the_title() ?></h3>
@@ -107,14 +109,12 @@ get_header();  ?>
 							<li><a href="https://github.com/itscjreyes"><i class="fa fa-github"></i></a></li>
 							<li><a href="https://ca.linkedin.com/in/reyescj"><i class="fa fa-linkedin"></i></a></li>
 							<li><a href="https://twitter.com/itscjreyes"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://medium.com/@cjreyes"><i class="fa fa-medium"></i></a></li>
 						</ul>
 				</div>
-				<form action="" class="contactForm">
-					<input type="text" name="Name" id="contactForm" placeholder="Name*" required>
-					<input type="text" name="Email" id="contactForm" placeholder="Email*" required>
-					<textarea name="Message" id="contactForm" placeholder="Say Hello!"></textarea>
-					<input type="submit" name="Submit" id="contactForm" value="Send">
-				</form>
+				<div class="contactForm">
+					<?php the_content(); ?>
+				</div>
 			</div>
 		</div>
 	</div>

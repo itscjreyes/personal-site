@@ -75,9 +75,9 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
-  	'smoothscroll',
-  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js",
-  	false,
+  	'smoothScroll',
+  	"http://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js",
+  	array('jquery', 'plugins'),
   	null,
   	true
   	);
