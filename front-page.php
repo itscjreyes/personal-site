@@ -15,6 +15,10 @@ get_header();  ?>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<div class="aboutText">
 				<h4>about me.</h4>
+				<div class="aboutImg responsiveImg">
+					<?php $headshot = get_field('headshot') ?>
+					<img src="<?php echo $headshot['url']?>" alt="">
+				</div>
 				<p><?php the_field('bio') ?></p>
 				<div class="skills">
 					<span class="devicons devicons-html5"></span>

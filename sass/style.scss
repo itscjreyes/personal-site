@@ -114,6 +114,10 @@ h4 {
 	}
 }
 
+.responsiveImg {
+	display: none;
+}
+
 /// Skills Styles ///
 
 .skills {
@@ -125,8 +129,6 @@ h4 {
 	font-size: 40px;
 	margin: 20px;
 	display: inline-block;
-	transition: all 0.3s ease;
-	position: relative;
 }
 
 /// Portfolio Styles ///
@@ -141,7 +143,7 @@ figure {
 	img {
 		transition: all 0.5s ease;
 		height: 100%;
-		transform: translate(30%);
+		transform: translate(20%);
 	}
 
 	&:hover {
@@ -206,6 +208,7 @@ figcaption {
 	margin-right: 5px;
 	margin-top: 5px;
 	transition: all 0.4s ease;
+	width: 150px;
 
 	a {
 		padding: 5px 10px;
@@ -318,7 +321,7 @@ figcaption {
 	}
 }
 	input[type="submit"] {
-		width: 20%;
+		width: 150px;
 		margin: 20px auto;
 		padding: 5px 10px;
 		color: white;
@@ -355,7 +358,9 @@ figcaption {
 
 .singleContent {
 	display: flex;
+	flex-direction: row-reverse;
 }
+
 .tags {
 
 	ul {
@@ -471,6 +476,7 @@ figcaption {
 	height: 73vh;
 	.container {
 		margin-top: 10vh;
+		width: 80%;
 	}
 
 	h1 {
@@ -495,13 +501,127 @@ figcaption {
 
 /* MEDIA QUERIES */
 
+@media (max-width: 1000px) {
+	figure {
+		img {
+			transform: translate(10%);
+		}
+	}
+
+	figcaption {
+		padding: 0 4%;
+	}
+}
+
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
-	
+	figure {
+		width: 100%;
+		text-align: center;
+		height: 100%;
+		margin: 5% 0 5%;
+
+		img {
+			transform: translate(0);
+			height: 50%;
+			width: 50%;
+		}
+
+		&:hover {
+			img {
+				transform: translate(0);
+			}
+		}
+	}
+
+	figcaption {
+		position: relative;
+		right: 0;
+		margin: 5% auto;
+		padding: 5%;
+	}
+
+	.singlePage .container {
+		width: 80%;
+	}
+
+	.singleTitle .viewLive {
+		margin: 20px auto 0;
+	}
+
+	.singleContent {
+		display: block;
+	}
+
+	.fullImages {
+		width: 60%;
+		margin: 0 auto 50px;
+	}
+
+	.fullDescription {
+		width: 100%;
+	}
+
+	.entry-content p {
+		margin-top: 30px;
+		padding-top: 30px;
+	}
+
+	#nav-below {
+		margin: 40px 0 30px;
+	}
+}
+
+@media (max-width: 800px) {
+	.about .container {
+		display: block;
+	}
+
+	.aboutText {
+		width: 100%;
+	}
+
+	.aboutImg {
+		display: none;
+	}
+
+	.responsiveImg {
+		display: block;
+		margin: 0 auto 20px;
+		width: 60%;
+	}
+
+	.contact .wrapper {
+		display: block;
+		padding: 2% 10%;
+	}
+
+	.contactForm,
+	.contactInfo {
+		width: 100%;
+		margin: auto;
+	}
+
+	.contactInfo {
+		margin-bottom: 10%;
+	}
+
+	figcaption {
+		width: 90%;
+	}
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 650px) {
+
+	.container {
+		width: 100%;
+	}
+
+	header .container,
+	footer .container {
+		width: 80%;
+	}
 
 	.fullNav {
 		display: none;
@@ -517,8 +637,64 @@ figcaption {
 		opacity: 1;
 		right: 0;
 	}
+
+	figure {
+		width: 100%;
+
+		figcaption {
+		background-color: $colourAccent;
+		color: white;
+		}
+
+		img {
+			width: 90%;
+		}
+
+		h3 {
+			color: white;
+		}
+
+		.tags {
+			li {
+				background-color: white;
+				color: $colourAccent;
+			}
+		}
+	}
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
+	.hero {
+		h1 {
+			font-size: 55px;
+		}
+
+		h3 {
+			font-size: 20px;
+			letter-spacing:0;
+		}
+	}
+
+	.singlePage {
+		h1 {
+			font-size: 45px;
+		}
+	}
+
+	.skills {
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	.devicons {
+		font-size: 35px;
+		margin: 8px;
+		display: inline-block;
+	}
+
+	.fullImages {
+		width: 100%;
+	}
+
 }

@@ -12,6 +12,12 @@
             <button class="viewLive"><a href="<?php the_field('website') ?>">View Live</a></button>
           </div>
         <div class="singleContent">
+          <div class="fullImages">
+            <?php $portImage = get_field('images_group') ?>
+            <?php $portImageArray = $portImage[1]['port_img'] ?>
+            <img src="<?php echo $portImageArray['url'] ?>" alt="">
+          </div><!-- .fullImages -->
+          
           <div class="fullDescription">
                 
                 <div class="tags">
@@ -45,11 +51,7 @@
             </div><!-- #nav-below -->
           </div><!-- .fullDescription -->
           
-          <div class="fullImages">
-            <?php $portImage = get_field('images_group') ?>
-            <?php $portImageArray = $portImage[1]['port_img'] ?>
-            <img src="<?php echo $portImageArray['url'] ?>" alt="">
-          </div><!-- .fullImages -->
+          
         </div><!-- .singleContent -->
 
         </div><!-- #post-## -->
