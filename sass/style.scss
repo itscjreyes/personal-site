@@ -554,8 +554,12 @@ figcaption {
 	}
 
 	.fullImages {
-		width: 60%;
+		width: 100%;
 		margin: 0 auto 50px;
+	}
+
+	.tags {
+		text-align: center;
 	}
 
 	.fullDescription {
