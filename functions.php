@@ -54,7 +54,7 @@ function hackeryou_styles(){
 
 	wp_enqueue_style('devicons', 'https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css');
 
-	wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Work+Sans:400,700|Lora:400,700');
+	wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Work+Sans:400,700|Playfair+Display:400,700');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');

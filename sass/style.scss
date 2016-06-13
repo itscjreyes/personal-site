@@ -26,6 +26,7 @@ img {
 
 body {
 	color: $colourBody;
+	font-family: $fontBody;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -81,8 +82,9 @@ a:hover {
 		color: $colourBody;
 		font-family: $fontBody;
 		font-weight: 400;
-		letter-spacing: 3px;
+		letter-spacing: 1px;
 		font-size: 22px;
+		text-transform: uppercase;
 	}
 }
 
@@ -178,13 +180,13 @@ figcaption {
 	right: -20%;
 	background-color: white;
 	padding: 2% 5%;
-	color: $colourAccent;
+	color: $colourBody;
 	display: flex;
 	transition: all 0.5s ease;
 	
 	h3 {
 		font-weight: 400;
-		font-size: 22px;
+		font-size: 28px;
 		transition: all 0.5s ease;
 		letter-spacing: 0;
 		padding-bottom: 10px;
@@ -192,12 +194,11 @@ figcaption {
 
 	.wrapper {
 		width: 100%;
-		height: 80%;
 		margin: auto;
 	}
 
 	.tags ul {
-		margin: 10px 0;
+		margin: 30px 0 10px;
 	}
 }
 
@@ -206,7 +207,7 @@ figcaption {
 	background-color: $colourAccent;
 	border: 1px solid white;
 	margin-right: 5px;
-	margin-top: 5px;
+	margin-top: 10px;
 	transition: all 0.4s ease;
 	width: 150px;
 
@@ -243,8 +244,9 @@ figcaption {
 	text-align: center;
 
 	h5 {
-		font-size: 20px;
-		letter-spacing: 0;
+		font-size: 24px;
+		letter-spacing: 1px;
+		font-weight: 400;
 	}
 
 	p {
@@ -385,14 +387,16 @@ figcaption {
 }
 
 .entry-content {
-	
+	margin-top: 10%;
+	border-top: 2px solid $colourHighlight;
+	padding-top: 5%;
+
 	p {
-		margin-top: 10%;
-		color: $colourAccent;
-		font-family: $fontTitle;
-		font-size: 18px;
-		border-top: 2px solid $colourHighlight;
 		padding-top: 5%;
+	}
+
+	a {
+		color: $colourAccent;
 	}
 }
 
@@ -566,11 +570,6 @@ figcaption {
 		width: 100%;
 	}
 
-	.entry-content p {
-		margin-top: 30px;
-		padding-top: 30px;
-	}
-
 	#nav-below {
 		margin: 40px 0 30px;
 	}
@@ -627,6 +626,10 @@ figcaption {
 		width: 80%;
 	}
 
+	header ul li {
+		padding: 0;
+	}
+
 	.fullNav {
 		display: none;
 	}
@@ -645,24 +648,33 @@ figcaption {
 	figure {
 		width: 100%;
 
-		figcaption {
-		background-color: $colourAccent;
-		color: white;
+		&:hover {
+			figcaption {
+				background-color: white;
+				color: $colourBody;
+			}
+
+			h3 {
+				color: $colourAccent;
+			}
+
+			.tags {
+				li {
+					background-color: $colourBody;
+					color: white;
+				}
+			}
 		}
 
 		img {
 			width: 90%;
 		}
+	}
 
-		h3 {
-			color: white;
-		}
-
-		.tags {
-			li {
-				background-color: white;
-				color: $colourAccent;
-			}
+	.viewMore,
+	.viewLive {
+		&:hover {
+			border: 1px solid $colourAccent;
 		}
 	}
 }
@@ -675,7 +687,7 @@ figcaption {
 		}
 
 		h3 {
-			font-size: 20px;
+			font-size: 17px;
 			letter-spacing:0;
 		}
 	}

@@ -15,10 +15,15 @@ console.log('Like what you see? Get in touch! Contact me at hello@cjreyes.ca')
 	$('.responsiveNav a').on('click', function(){
 		$('.responsiveNav').removeClass('show');
 		$('.hamburger').removeClass('open');
-	})
+	});
 
 	// Back button on 404
 	$('button.back').on('click', function(){
 		window.history.back();
-	})
+	});
+
+	// Blue dot scroll to top
+	$('header h1').on('click', function(){
+		$('html, body').animate({ scrollTop: 0 }, 'slow');
+	});
 });

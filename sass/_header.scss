@@ -16,7 +16,6 @@ header {
 	}
 }
 
-
 header h1 {
 	font-size: 20px;
 	text-transform: none;
@@ -26,6 +25,7 @@ header h1 {
 	padding: 10px;
 	font-family: $fontBody;
 	letter-spacing: 0;
+	cursor: pointer;
 }
 
 header ul {

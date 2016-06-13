@@ -30,8 +30,8 @@ get_header();  ?>
 					<span class="devicons devicons-sass"></span>
 					<span class="devicons devicons-sublime"></span>
 					<span class="devicons devicons-gulp"></span>
+					<span class="devicons devicons-git"></span>
 					<span class="devicons devicons-github"></span>
-					<span class="devicons devicons-w3c"></span>
 					<span class="devicons devicons-photoshop"></span>
 				</div> <!-- .skills -->
 			</div> <!-- .aboutText -->
