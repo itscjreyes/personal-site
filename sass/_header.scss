@@ -50,21 +50,26 @@ header ul {
 
 		&:after {
 			content: "";
-			width: 0px;
-			height: 1px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			visibility: hidden;
+			opacity: 0;
 			background-color: $colourAccent;
 			position: absolute;
-			bottom: 0;
-			left: 30px;
+			bottom: 7px;
+			left: 15px;
 			transition: all 0.4s ease;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $colourAccent;
 			border-bottom: none;
 			
 			&:after {
-				width: 30px;
+				visibility: visible;
+				opacity: 1;
 			}
 		}
 	}

@@ -22,17 +22,31 @@ get_header();  ?>
 				<p><?php the_field('bio') ?></p>
 				<div class="skills">
 					<span class="devicons devicons-html5"></span>
+					<!-- <p>HTML5</p> -->
 					<span class="devicons devicons-css3"></span>
-					<span class="devicons devicons-javascript_badge"></span>
-					<span class="devicons devicons-jquery"></span>
-					<span class="devicons devicons-responsive"></span>
-					<span class="devicons devicons-wordpress"></span>
+					<!-- <p>CSS3</p> -->
 					<span class="devicons devicons-sass"></span>
+					<!-- <p>Sass</p> -->
+					<span class="devicons devicons-javascript_badge"></span>
+					<!-- <p>JavaScript</p> -->
+					<span class="devicons devicons-jquery"></span>
+					<!-- <p>jQuery</p> -->
+					<i class="fa fa-mobile"></i>
+					<!-- <p>Responsive</p> -->
+					<span class="devicons devicons-wordpress"></span>
+					<!-- <p>WordPress</p> -->
 					<span class="devicons devicons-sublime"></span>
+					<!-- <p>Sublime</p> -->
+					<span class="devicons devicons-terminal"></span>
+					<!-- <p>Command Line</p> -->
 					<span class="devicons devicons-gulp"></span>
+					<!-- <p>Gulp</p> -->
 					<span class="devicons devicons-git"></span>
+					<!-- <p>Git</p> -->
 					<span class="devicons devicons-github"></span>
+					<!-- <p>GitHub</p> -->
 					<span class="devicons devicons-photoshop"></span>
+					<!-- <p>Photoshop</p> -->
 				</div> <!-- .skills -->
 			</div> <!-- .aboutText -->
 			<div class="aboutImg">

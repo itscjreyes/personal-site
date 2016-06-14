@@ -36,7 +36,8 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 2px;
 }
 
-a:hover {
+a:hover,
+a:focus {
 	color: $colourAccent;
 	border-bottom: 2px solid $colourHighlight;
 }
@@ -123,15 +124,16 @@ h4 {
 /// Skills Styles ///
 
 .skills {
-	margin: 20px auto;
-	text-align: center;
+	margin-top: 60px;
+	
+	.devicons,
+	.fa {
+		font-size: 40px;
+		margin: 10px 20px 10px 0;
+		display: inline-block;
+	}
 }
 
-.devicons {
-	font-size: 40px;
-	margin: 20px;
-	display: inline-block;
-}
 
 /// Portfolio Styles ///
 
@@ -148,7 +150,8 @@ figure {
 		transform: translate(20%);
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 
 		img {
 			transform: translate(-20%);
@@ -221,7 +224,8 @@ figcaption {
 		display: block;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: white;
 
 		a {
@@ -250,7 +254,7 @@ figcaption {
 	}
 
 	p {
-		padding: 20px 0 0;
+		padding: 30px 0 0;
 	}
 
 	.email {
@@ -259,38 +263,25 @@ figcaption {
 		position: relative;
 		transition: all 0.5s ease;
 
-		&:after {
-			content: "";
-			width: 0px;
-			height: 1px;
-			background-color: $colourAccent;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			transition: all 0.4s ease;
-		}
-
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $colourAccent;
 			border-bottom: none;
-			
-			&:after {
-				width: 30px;
-			}
 		}
 	}
 
 	ul li {
 		display: inline-block;
 		font-size: 25px;
-		margin-top: 5px;
+		margin-top: 15px;
 		padding: 0 10px;
 
 		a {
 			color: $colourBody;
 			transition: all 0.4s ease;
 			
-			&:hover {
+			&:hover,
+			&:focus {
 				border: none;
 				color: $colourAccent;
 			}
@@ -320,6 +311,7 @@ figcaption {
 
 	textarea {
 		min-height: 100px;
+		resize: none;
 	}
 }
 	input[type="submit"] {
@@ -334,7 +326,8 @@ figcaption {
 		letter-spacing: 2px;
 		transition: all 0.4s ease;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background: none;
 			color: $colourAccent;
 		}
@@ -375,7 +368,7 @@ figcaption {
 			font-size: 14px;
 			color: white;
 			background-color: $colourBody;
-			padding: 2px 10px;
+			padding: 3px 15px;
 			margin: 5px 5px 5px 0;
 		}
 	}
@@ -433,7 +426,8 @@ figcaption {
 			transition: all 0.4s ease;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $colourAccent;
 			border-bottom: none;
 			
@@ -463,7 +457,8 @@ figcaption {
 			transition: all 0.4s ease;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $colourAccent;
 			border-bottom: none;
 			
@@ -496,7 +491,8 @@ figcaption {
 		color: white;
 		padding: 5px 10px;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: white;
 			color: $colourAccent;
 		}
@@ -531,7 +527,8 @@ figcaption {
 			width: 50%;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			img {
 				transform: translate(0);
 			}
@@ -648,7 +645,8 @@ figcaption {
 	figure {
 		width: 100%;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			figcaption {
 				background-color: white;
 				color: $colourBody;
@@ -673,7 +671,8 @@ figcaption {
 
 	.viewMore,
 	.viewLive {
-		&:hover {
+		&:hover,
+		&:focus {
 			border: 1px solid $colourAccent;
 		}
 	}
@@ -696,11 +695,6 @@ figcaption {
 		h1 {
 			font-size: 45px;
 		}
-	}
-
-	.skills {
-		margin: 20px auto;
-		text-align: center;
 	}
 
 	.devicons {
